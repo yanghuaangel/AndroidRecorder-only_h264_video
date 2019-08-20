@@ -220,6 +220,7 @@ public class H264Encoder {
 
     /**
      * 根据帧数生成时间戳
+     * Generates the presentation time for frame N, in microseconds.
      */
     private long computePresentationTime(long frameIndex) {
         return 132 + frameIndex * 1000 * 1000 / framerate;
